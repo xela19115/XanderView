@@ -2,6 +2,10 @@
 
 XanderView is a Samsung Tizen TV launcher forked from [CleanFrame](https://github.com/nthnclrk/CleanFrame) by Nathan Clark. It keeps a simple home screen for your apps, with a configurable weather widget and remote-friendly controls.
 
+![XanderView home screen with a weather widget and app dock](docs/images/xanderview-home.png)
+
+*Browser preview with example weather data.*
+
 - Centered app dock with up to 10 square tiles per row and 20 apps in two rows.
 - App discovery, reordering, TV Settings and Connected Devices shortcuts.
 - Optional weather, location and temperature-unit settings, provided by Open-Meteo.
