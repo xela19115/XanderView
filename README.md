@@ -8,11 +8,18 @@ XanderView is a Samsung Tizen TV launcher forked from [CleanFrame](https://githu
 
 - Centered app dock with up to 10 square tiles per row and 20 apps in two rows.
 - App discovery, reordering, TV Settings and Connected Devices shortcuts.
-- Optional weather, location and temperature-unit settings, provided by Open-Meteo.
+- Optional weather, location, and temperature-unit settings, provided by Open-Meteo.
 - Wallpaper gallery, fonts, layout and appearance settings.
 - Optional Tizen 10 workaround that returns to XanderView when Samsung Home appears (see below).
 
-The original CleanFrame copyright and MIT licence remain in [LICENSE](LICENSE). Fonts, photographs and logos have their own terms in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and [asset sources](docs/asset-sources.md). XanderView is independent of Samsung and the services whose marks appear here.
+The original CleanFrame copyright and MIT licence remain in [LICENSE](LICENSE). Fonts, photographs, and logos have their own terms in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and [asset sources](docs/asset-sources.md). XanderView is independent of Samsung and the services whose marks appear here.
+
+Optionally, the AI agent can:
+
+ - Add/remove/change the backgrounds and fonts.
+ - Change shapes, shades, or colors of app tiles or icons.
+
+
 
 ## Preview
 
@@ -25,7 +32,7 @@ npm ci
 npm run dev
 ```
 
-Open `http://localhost:4795/home/`. Use arrow keys, Enter and Escape. Launching apps and Samsung menus requires a TV.
+Open `http://localhost:4795/home/`. Use arrow keys, Enter, and Escape. Launching apps and Samsung menus requires a TV.
 
 ## Install on a Samsung TV
 
@@ -33,7 +40,7 @@ A `.wgt` must be signed with a Samsung developer certificate that includes the t
 
 1. Install [Tizen Studio and the Samsung TV Extension](https://developer.samsung.com/smarttv/develop/getting-started/setting-up-sdk.html). Enable Developer Mode on the TV, configure the development computer's IP address, and restart the TV as required. See Samsung's [device connection instructions](https://developer.samsung.com/smarttv/develop/getting-started/using-sdk/tv-device.html).
 2. Create a Samsung author and distributor certificate/profile for your TV in Certificate Manager. Include the TV's DUID in the distributor certificate. See [Samsung certificate instructions](https://developer.samsung.com/smarttv/develop/getting-started/setting-up-sdk/creating-certificates.html). Keep certificates and passwords private.
-3. For your own installation, choose a unique ten-character alphanumeric package ID and run `python3 scripts/configure-identity.py YOURID1234`. This updates the app identity and its internal self references. Keep the same ID and author certificate for later updates.
+3. For your own installation, choose a unique ten-character alphanumeric package ID and run `python3 scripts/configure-identity.py YOURID1234`. This updates the app identity and its internal self-references. Keep the same ID and author certificate for later updates.
 4. Create and sign the package with the Tizen SDK's `tz` executable and your profile:
 
    ```sh
@@ -43,9 +50,9 @@ A `.wgt` must be signed with a Samsung developer certificate that includes the t
    ```
 
    The result is `dist/XanderView.wgt`. Paths vary by operating system and SDK installation. The signing script regenerates the unsigned archive from the current source, including any identity change.
-5. Connect the TV with Samsung's Device Manager or `sdb`, then install the signed widget using Tizen Studio or the Samsung SDK installation flow. Verify XanderView opens and remote navigation works. Firmware, permissions and app IDs vary across TV models; an installation command reporting success does not guarantee every shortcut works.
+5. Connect the TV with Samsung's Device Manager or `sdb`, then install the signed widget using Tizen Studio or the Samsung SDK installation flow. Verify XanderView opens and remote navigation works. Firmware, permissions, and app IDs vary across TV models; an installation command reporting success does not guarantee every shortcut works.
 
-The project was used on two Samsung models, QN800B and QN990F, but the public build and its independent identity have not been physically tested on every TV. App shortcuts and connected-device menus may vary by model or region.
+The project was used on two Samsung models, QN800B and QN990F, but we have not physically tested the public build or its independent identity on every TV. App shortcuts and connected-device menus may vary by model or region.
 
 ## Home button on Tizen 10
 
@@ -63,4 +70,4 @@ npm run check:browser
 npm run package
 ```
 
-`npm run package` creates `dist/XanderView-public-unsigned.wgt` plus its SHA-256 report. No paid fonts, credentials or device settings are included. The bundled 15 wallpapers are the credited original CleanFrame gallery; owners may replace these locally, subject to the images' licences.
+`npm run package` creates `dist/XanderView-public-unsigned.wgt` plus its SHA-256 report. No paid fonts, credentials, or device settings are included. The bundled 15 wallpapers are from the credited original CleanFrame gallery; owners may replace these locally, subject to the images' licences.
