@@ -1,0 +1,144 @@
+/* QN800B Home composition: quiet header and a low, compact app ribbon.
+   Materials remain registered to the full-stage photograph; no runtime blur. */
+
+/* A readable, single-line clock and date leave the landscape open. */
+.l-dock{--reference-header-ink:#fff;--reference-header-shadow:0 1px 3px rgba(4,10,18,.48),0 3px 18px rgba(4,10,18,.25)}
+.bg-photo.has-adaptive-ink.l-dock{--reference-header-ink:var(--tl-clock-ink);--reference-header-shadow:var(--tl-shadow)}
+.bg-photo.l-dock.has-dock-clock-ink:not(.has-adaptive-ink){--reference-header-ink:var(--dock-clock-ink)}
+.l-dock .caption{left:112px;top:78px;display:block;max-width:1210px;color:var(--ink)}
+.home-clock-row{display:flex;align-items:baseline;min-height:88px;white-space:nowrap}
+.home-clock-row .clock{font-size:80px;line-height:88px;font-weight:400;letter-spacing:-2.4px;opacity:1}
+.home-clock-row .clock-digit{width:var(--font-clock-large-digit);min-width:0}
+.clock-period{margin-left:10px;font-size:24px;line-height:32px;font-weight:400;letter-spacing:.02em}
+.clock-divider{align-self:center;display:block;width:1px;height:44px;margin:10px 28px 0;background:currentColor;opacity:.4}
+.home-date{font-size:22px;line-height:32px;font-weight:500;letter-spacing:2px;text-transform:uppercase}
+.wallpaper-credit{display:block;max-width:1080px;margin-top:12px;font-size:22px;line-height:30px;font-weight:400;letter-spacing:-.1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:.8}
+.l-dock .caption .full-name{display:none}
+.bg-photo.l-dock .home-clock-row,.bg-photo.l-dock .wallpaper-credit{color:var(--reference-header-ink);text-shadow:var(--reference-header-shadow)}
+.bg-photo.has-adaptive-ink.l-dock .caption .home-clock-row .clock,.bg-photo.l-dock.has-dock-clock-ink .caption .home-clock-row .clock{color:inherit;opacity:1;text-shadow:inherit}
+.bg-light .home-clock-row,.bg-light .wallpaper-credit{color:#1d1a16;text-shadow:none}
+.bg-dark .home-clock-row,.bg-dark .wallpaper-credit{color:#f5f5f3;text-shadow:none}
+.font-custom .home .home-clock-row .clock{top:0;font-weight:400}
+.font-custom .home .clock-period,.font-custom .home .home-date,.font-custom .home .wallpaper-credit{font-family:var(--font-ui-family),sans-serif}
+.font-newsreader .home .home-clock-row .clock{font-variation-settings:"opsz" 80}
+.font-newsreader .home .home-date,.font-newsreader .home .clock-period,.font-newsreader .home .wallpaper-credit{font-variation-settings:"opsz" 22}
+
+/* Round controls echo the remote-friendly circles in the reference. */
+.l-dock .quiet-utils,.l-dock .quiet-utils.is-icons,.l-dock .quiet-utils.is-text{right:112px;top:92px;bottom:auto;display:flex;align-items:flex-start;gap:0}
+.l-dock .quiet-utils .u{position:relative;display:flex;align-items:center;justify-content:center;flex:none;width:72px;max-width:72px;height:72px;margin-left:28px;padding:0;border:1px solid rgba(255,255,255,.25);border-radius:50%;background:rgba(255,255,255,.07);color:var(--u-ink);opacity:.9;text-shadow:0 1px 3px rgba(4,10,18,.35);box-shadow:inset 0 1px 0 rgba(255,255,255,.10);transition:background-color 140ms linear,border-color 140ms linear,opacity 140ms linear}
+.l-dock .quiet-utils .u:first-child{margin-left:0}
+/* Override the earlier asymmetric Settings padding within circular controls. */
+.l-dock .quiet-utils.is-both .u[data-action="util.settings"]{padding:0}
+.l-dock .quiet-utils .u .u-content{display:flex;align-items:center;justify-content:center;width:100%;height:100%;gap:0}
+.l-dock .quiet-utils .u .ico,.l-dock .quiet-utils.is-icons .u .ico,.l-dock .quiet-utils .u[data-action="util.settings"] .ico{display:block;width:32px;height:32px;stroke-width:1.7}
+.l-dock .quiet-utils .u .ut-underlay{display:none}
+.l-dock .quiet-utils .u-label{position:absolute;left:-28px;right:-28px;top:82px;max-width:none;min-width:0;font-size:20px;line-height:28px;letter-spacing:0;text-align:center;white-space:nowrap;overflow:visible;color:inherit;opacity:.85}
+.l-dock .quiet-utils.is-icons .u-label{display:none}
+.l-dock .quiet-utils.is-text .u{width:auto;max-width:240px;min-width:118px;padding:0 20px;border-radius:36px}
+.l-dock .quiet-utils.is-text .u .ico{display:none}
+.l-dock .quiet-utils.is-text .u-label{position:static;font-size:24px;line-height:32px;opacity:1}
+.l-dock .quiet-utils.is-awake .u{opacity:.7}
+.l-dock .quiet-utils .u.is-focus{color:var(--u-ink);opacity:1;background:rgba(255,255,255,.18);border:2px solid #fff;text-shadow:0 1px 3px rgba(4,10,18,.35)}
+.l-dock .ut-lens{display:none}
+.l-dock .util-focus-label{font-size:22px;line-height:30px;color:var(--tr-ink);text-shadow:0 1px 3px rgba(4,10,18,.48)}
+.bg-light.l-dock .quiet-utils .u{color:#1d1a16;background:rgba(29,26,22,.045);border-color:rgba(29,26,22,.22);text-shadow:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.5)}
+.bg-light.l-dock .quiet-utils .u.is-focus{color:#1d1a16;background:rgba(29,26,22,.12);border-color:#1d1a16;text-shadow:none}
+.bg-light.l-dock .util-focus-label{color:#1d1a16;text-shadow:none}
+.font-custom.l-dock .home .quiet-utils .u-label{position:absolute;top:82px}
+.font-custom.l-dock .home .quiet-utils.is-text .u-label{position:static;top:auto}
+
+/* A lower ribbon gives the weather room and retains every selected app. */
+.l-dock .dock .mat{border-radius:30px;background:rgba(11,18,29,.2)}
+.device-dock{position:absolute;z-index:5;left:600px;top:1120px;width:720px;height:164px;display:flex;align-items:center;justify-content:center;gap:24px;border:1px solid rgba(255,255,255,.28);border-radius:30px;background:rgba(11,18,29,.86);transition:transform 220ms ease}
+.device-dock-open .device-dock{transform:translateY(-310px)}
+.device-shortcut{width:300px;height:116px;border:2px solid transparent;border-radius:19px;background:rgba(255,255,255,.12);color:#fff;display:flex;align-items:center;justify-content:center;gap:18px;font:500 25px Manrope,Arial,sans-serif}
+.device-shortcut .ico{width:38px;height:38px}
+.device-shortcut.is-focus{border-color:#fff;background:rgba(255,255,255,.22)}
+.device-dock-open .dock,.device-dock-open .app-focus-name{opacity:0;pointer-events:none}
+.l-list .device-dock{display:none}
+.l-dock .dock .mat::after{border-radius:30px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.28),inset 0 1px 0 rgba(255,255,255,.18)}
+.l-dock .dock .mat-img{opacity:.88}
+.l-dock .dock .tile,.l-dock .dock .plate{border-radius:19px}
+.l-dock .dock .tile-content{border-radius:19px;background:rgba(8,14,25,.16);opacity:.85}
+.l-dock .dock .tile.is-focus .tile-content,.l-dock .dock .tile.is-lifted .tile-content{opacity:1;background:rgba(255,255,255,.13)}
+.l-dock .dock .tile.is-sel .tile-content{opacity:.94}
+.l-dock.f-type .dock .tile.is-focus .tile-content{transform:scale(1.035)}
+.l-dock .dock .plate.on-focus{background:rgba(255,255,255,.11);box-shadow:none}
+.l-dock .dock .tile.is-focus::after{border:3px solid #fff;border-radius:19px}
+.l-dock .dock .tile .mark{left:32px;top:12px;opacity:1}
+.l-dock.a-icons .dock .tile .mark{left:24px;top:20px}
+.l-dock .dock .tile .label{left:8px;right:8px;height:56px;padding:0;font-size:24px;line-height:27px;font-weight:400;letter-spacing:-.15px;white-space:normal;overflow:hidden;text-overflow:clip;word-wrap:normal}
+.l-dock.a-text .dock .tile .label{left:8px;right:8px;height:58px;line-height:28px;font-weight:500}
+.l-dock .dock .tile .label-ink{display:block;white-space:normal;overflow:visible}
+.l-dock .dock .tile .monogram{font-size:44px!important}
+.l-dock .dock .tile .monogram span{width:1.1em;height:1.1em;border-radius:10px}
+.l-dock .dock .tile .monogram span::after{border:0}
+.l-dock .dock .tile .add{left:68px;top:10px;width:40px;height:40px}
+.l-dock .dock .tile .add .ico{width:40px;height:40px}
+.bg-dark.l-dock .dock .mat,.bg-light.l-dock .dock .mat{display:block}
+.bg-dark.l-dock .dock .mat-img,.bg-light.l-dock .dock .mat-img{display:none}
+.bg-dark.l-dock .dock .mat{background:rgba(255,255,255,.055)}
+.bg-light.l-dock .dock .mat{background:rgba(29,26,22,.05)}
+.bg-light.l-dock .dock .mat::after{box-shadow:inset 0 0 0 1px rgba(29,26,22,.2)}
+.bg-light.l-dock .dock .tile-content{background:rgba(29,26,22,.04)}
+.bg-light.l-dock .dock .tile.is-focus .tile-content{background:rgba(29,26,22,.1)}
+
+/* The current app name belongs above the whole ribbon, between fine rules. */
+.l-dock .app-focus-name{display:flex;align-items:center;justify-content:center;overflow:visible;font-size:24px;line-height:34px;letter-spacing:3px;text-transform:uppercase;text-align:center;white-space:nowrap;color:#fff;opacity:0;text-shadow:0 1px 3px rgba(4,10,18,.45)}
+.l-dock .app-focus-name.is-on{opacity:1}
+.l-dock .app-focus-name::before,.l-dock .app-focus-name::after{content:"";display:block;flex:1;height:1px;background:currentColor;opacity:.32}
+.l-dock .app-focus-copy{display:block;flex:none;max-width:calc(100% - 80px);padding:0 28px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bg-light.l-dock .app-focus-name{color:#1d1a16;text-shadow:none}
+.bg-dark.l-dock .app-focus-name{color:#f5f5f3;text-shadow:none}
+.l-dock .dock-action{top:994px;height:48px;font-size:24px;line-height:32px}
+
+/* List remains a first-class alternative; its larger app names keep their space. */
+.l-list .home-clock-row{justify-content:flex-end;min-height:64px}
+.l-list .home-clock-row .clock{font-size:56px;line-height:64px;letter-spacing:-1.5px}
+.l-list .home-clock-row .clock-digit{width:var(--font-clock-list-digit)}
+.l-list .clock-period{font-size:18px;line-height:26px;margin-left:8px}
+.l-list .clock-divider{height:32px;margin:4px 18px 0}
+.l-list .home-date{font-size:17px;line-height:26px;letter-spacing:1px}
+.l-list .wallpaper-credit{max-width:760px;font-size:18px;line-height:28px;margin-top:6px}
+
+@media(prefers-reduced-motion:reduce){
+  .l-dock.f-type .dock .tile.is-focus .tile-content{transform:none!important}
+}
+
+/* Branded cards use local marks; the outer white border remains remote focus. */
+.stage.l-dock .dock .tile.brand-netflix .tile-content{background:linear-gradient(160deg,#191919,#070707);color:#f5f5f5;box-shadow:inset 0 1px 0 rgba(255,255,255,.13)}
+.stage.l-dock .dock .tile.brand-netflix .mark{color:#e50914}
+.stage.l-dock .dock .tile.brand-youtube .tile-content{background:linear-gradient(160deg,#fff,#e9edf1);color:#16191d;box-shadow:inset 0 1px 0 rgba(255,255,255,.7)}
+.stage.l-dock .dock .tile.brand-youtube .mark{color:#ff0033}
+.stage.l-dock .dock .tile.brand-primevideo .tile-content{background:linear-gradient(160deg,#16a8ed,#0876c6);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.25)}
+.stage.l-dock .dock .tile.brand-disneyplus .tile-content{background:linear-gradient(155deg,#162c69,#091434);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.19)}
+.stage.l-dock .dock .tile.brand-appletv .tile-content{background:linear-gradient(160deg,#202225,#07090c);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.16)}
+.stage.l-dock .dock .tile.brand-plex .tile-content{background:linear-gradient(160deg,#302e2b,#171717);color:#f4bd4f;box-shadow:inset 0 1px 0 rgba(255,255,255,.15)}
+.stage.l-dock .dock .tile.brand-kartinatv .tile-content{background:linear-gradient(150deg,#862bc0,#471073);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.18)}
+.stage.l-dock .dock .tile.brand-tvplus .tile-content{background:linear-gradient(150deg,#1252b0,#142365);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.18)}
+.l-dock .dock .tile[class*="brand-"] .tile-content{opacity:1}
+.l-dock .dock .tile[class*="brand-"] .label{color:inherit;text-shadow:none}
+.stage.l-dock .dock .tile.brand-netflix .label{font-weight:500;letter-spacing:.3px}
+.stage.l-dock .dock .tile.brand-plex .monogram span{font-weight:600}
+.l-dock.a-text .dock .tile[class*="brand-"] .label{height:60px}
+
+/* Flat backgrounds have no photographic scrim inside their ribbon. */
+.bg-light.l-dock .dock .mat-scrim,.bg-light.l-dock .dock .mat-veil,.bg-dark.l-dock .dock .mat-scrim,.bg-dark.l-dock .dock .mat-veil{display:none}
+
+/* The dock uses a single monochrome palette; focus gives the selected square its surface. */
+.stage.l-dock .dock .tile[class*="brand-"] .tile-content,
+.stage.l-dock .dock .tile .tile-content{background:transparent;box-shadow:none;color:#fff;opacity:1}
+.stage.l-dock .dock .tile::before{content:"";position:absolute;z-index:3;top:0;right:0;bottom:0;left:0;border:1px solid rgba(255,255,255,.24);border-radius:inherit;pointer-events:none}
+.stage.bg-light.l-dock .dock .tile::before{border-color:rgba(29,26,22,.24)}
+.stage.l-dock .dock .tile.is-focus .tile-content{background:rgba(255,255,255,.16)}
+.stage.l-dock .dock .tile .mark{color:#fff!important;left:22px;top:25px}
+.stage.l-dock.a-icons .dock .tile .mark{left:18px;top:40px}
+.stage.l-dock .dock .tile .label{line-height:23px;height:48px}
+.stage.l-dock .dock .tile .monogram{font-size:36px!important}
+.stage.l-dock .dock .tile .mark:not(.native-icon) img{filter:grayscale(1) brightness(0) invert(1)}
+.stage.l-dock .dock .tile .native-icon img{filter:grayscale(1)}
+.stage.l-dock .dock .tile .label{color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.stage.bg-light.l-dock .dock .tile .mark{color:#1d1a16!important;text-shadow:none}
+.stage.bg-light.l-dock .dock .tile .label{color:#1d1a16;text-shadow:none}
+.stage.bg-light.l-dock .dock .tile .mark:not(.native-icon) img{filter:grayscale(1) brightness(0)}
+.l-dock .quiet-utils .u-label,.font-custom.l-dock .home .quiet-utils .u-label{display:none}

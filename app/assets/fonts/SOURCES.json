@@ -1,0 +1,78 @@
+[
+  {
+    "family": "geist",
+    "file": "geist/Geist-Variable.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/geist/Geist%5Bwght%5D.ttf",
+    "accessed": "2026-10-20",
+    "bytes": 169056,
+    "sha256": "73894e0448cae90a92b6c2f8732b7bb9acb7b94c418bff559dad4a18e1de9659",
+    "unchanged_upstream_bytes": true
+  },
+  {
+    "family": "geist",
+    "file": "geist/OFL.txt",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/geist/OFL.txt",
+    "accessed": "2026-10-20",
+    "bytes": 4387,
+    "sha256": "1781d2806a07d91c4edf4740b88449fab7d0eadad53f7c351b94cd4d4eb8c00f",
+    "unchanged_upstream_bytes": true
+  },
+  {
+    "family": "newsreader",
+    "file": "newsreader/Newsreader-Variable.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/newsreader/Newsreader%5Bopsz%2Cwght%5D.ttf",
+    "accessed": "2026-10-20",
+    "bytes": 451664,
+    "sha256": "8a08d13f8a6c0d51be379a60af84f945f65369a67e509ee3c3bdcc421254d7c1",
+    "unchanged_upstream_bytes": true
+  },
+  {
+    "family": "newsreader",
+    "file": "newsreader/OFL.txt",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/newsreader/OFL.txt",
+    "accessed": "2026-10-20",
+    "bytes": 4394,
+    "sha256": "fdfad38143ec470553cae82a1e45320bdd1b9ec70415d37bd0171051d8a4ded8",
+    "unchanged_upstream_bytes": true
+  },
+  {
+    "family": "googlesans",
+    "file": "googlesans/GoogleSans-Variable.ttf",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/googlesans/GoogleSans%5BGRAD%2Copsz%2Cwght%5D.ttf",
+    "accessed": "2026-10-24",
+    "bytes": 4974940,
+    "sha256": "d0a87d835a944b8b40d0e82a5651bb59ab97b936a2aeed5946eb57e7b2a3a90a",
+    "upstream_git_blob_sha": "a5e76cc713206f1cfe9a7fc31cc1b6f035034d81",
+    "unchanged_upstream_bytes": true
+  },
+  {
+    "family": "googlesans",
+    "file": "googlesans/METADATA.pb",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/googlesans/METADATA.pb",
+    "accessed": "2026-10-24",
+    "bytes": 2015,
+    "sha256": "b2f4f59f225f61b9d7223917a7beacc1a1d21e1d339cb44249e4b6c0d3137d23",
+    "upstream_git_blob_sha": "50cacdd6121b8b5744b0133e32047c96e4b59c6b",
+    "unchanged_upstream_bytes": true
+  },
+  {
+    "family": "googlesans",
+    "file": "googlesans/OFL.txt",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/googlesans/OFL.txt",
+    "accessed": "2026-10-24",
+    "bytes": 4488,
+    "sha256": "2b75ef20f13d83a7514aee452c4782c20cdc9ff2dee17600f44d37a06d4fb958",
+    "upstream_git_blob_sha": "035131accc0d7bc0ec5880f906800ebe1b1f854f",
+    "unchanged_upstream_bytes": true
+  },
+  {
+    "family": "googlesans",
+    "file": "googlesans/TRADEMARKS.md",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/googlesans/TRADEMARKS.md",
+    "accessed": "2026-10-24",
+    "bytes": 1470,
+    "sha256": "215bc8c1ce46d1b81531f33ebb5af201e7a5da76b8f3ae4c705336fd70fc89e1",
+    "upstream_git_blob_sha": "621fbbd85d6e346f46b0ef4f0658d3cfba7e3f80",
+    "unchanged_upstream_bytes": true
+  }
+]
