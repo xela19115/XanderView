@@ -1,0 +1,104 @@
+/* Weather uses a registered, pre-rendered material and never blurs live pixels. */
+.weather-widget{position:absolute;z-index:2;border:1px solid rgba(255,255,255,.23);border-radius:28px;overflow:hidden;background:rgba(8,17,28,.74);color:#fff;box-shadow:0 12px 40px rgba(0,0,0,.12);font-family:var(--font-ui-family,Manrope),Arial,sans-serif}
+.weather-surface{position:absolute;left:0;right:0;top:0;bottom:0;overflow:hidden;opacity:.45;pointer-events:none}
+.weather-surface img{position:absolute;width:1920px;height:1080px;max-width:none;object-fit:cover}
+.weather-widget::after{content:"";position:absolute;left:0;right:0;top:0;bottom:0;border-radius:inherit;background:rgba(4,12,24,.35);pointer-events:none}
+.l-dock .weather-widget{border:0;border-radius:30px;background:none;box-shadow:none}
+.l-dock .weather-widget::after{content:none}
+.l-dock .weather-material.mat{display:block;border-radius:30px;background:rgba(11,18,29,.2)}
+.l-dock .weather-material.mat::after{border-radius:30px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.28),inset 0 1px 0 rgba(255,255,255,.18)}
+.l-dock .weather-material .mat-img{opacity:.88}
+.bg-dark.l-dock .weather-material.mat{background:rgba(255,255,255,.055)}
+.bg-light.l-dock .weather-material.mat{background:rgba(29,26,22,.05)}
+.bg-light.l-dock .weather-material.mat::after{box-shadow:inset 0 0 0 1px rgba(29,26,22,.2)}
+.bg-dark.l-dock .weather-material .mat-img,.bg-light.l-dock .weather-material .mat-img,.bg-dark.l-dock .weather-material .mat-scrim,.bg-light.l-dock .weather-material .mat-scrim,.bg-dark.l-dock .weather-material .mat-veil,.bg-light.l-dock .weather-material .mat-veil{display:none}
+.bg-photo.l-dock .weather-body{text-shadow:0 1px 3px rgba(0,0,0,.9),0 3px 12px rgba(0,0,0,.75)}
+.bg-light.l-dock .weather-widget{color:#1d1a16}
+.bg-light.l-dock .weather-current>.weather-icon{color:#765000}
+.weather-body{position:relative;z-index:1;width:100%;height:100%;padding:26px 32px}
+.weather-location{font-size:23px;line-height:30px;font-weight:500;letter-spacing:1px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.weather-current{display:flex;align-items:center;height:110px;margin-top:4px}
+.weather-icon{width:64px;height:64px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.weather-current>.weather-icon{width:76px;height:76px;margin-right:16px;color:#f5dca0}
+.weather-temperature{font-size:78px;line-height:96px;font-weight:400;letter-spacing:-3px;white-space:nowrap}
+.weather-temperature small{font-size:25px;line-height:32px;margin-left:5px;letter-spacing:0;vertical-align:top;position:relative;top:14px;opacity:.75}
+.weather-condition{display:flex;flex-direction:column;max-width:300px;margin-left:26px}
+.weather-condition strong{font-size:25px;line-height:34px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.weather-condition>span{font-size:22px;line-height:32px;opacity:.75}
+.weather-details{font-size:20px;line-height:30px;opacity:.85;white-space:nowrap}
+.weather-attribution{position:absolute;left:32px;bottom:18px;right:28px;font-size:17px;line-height:24px;opacity:.68;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.weather-attribution a,.weather-provider a{color:inherit;text-decoration:none}
+.weather-attribution a:focus,.weather-provider a:focus{outline:2px solid currentColor}
+.weather-empty{font-size:28px;line-height:40px;max-width:940px;margin-top:38px}
+.weather-forecast{position:absolute;right:26px;top:64px;display:flex;height:144px;border-left:1px solid rgba(255,255,255,.2);padding-left:18px}
+.l-dock .weather-forecast{left:50%;justify-content:space-around}
+.weather-day{width:142px;text-align:center}
+.weather-day-name{display:block;font-size:22px;line-height:30px;opacity:.8}
+.weather-day .weather-icon{display:block;width:48px;height:48px;margin:8px auto}
+.weather-day-temperatures{display:block;font-size:28px;line-height:34px;white-space:nowrap}
+.weather-day-temperatures small{font-size:22px;margin-left:12px;opacity:.6}
+.weather-widget.with-forecast .weather-condition{max-width:230px;margin-left:20px}
+.weather-widget.with-forecast .weather-details{max-width:590px;font-size:19px}
+.l-dock .weather-widget.with-forecast .weather-details{max-width:calc(50% - 32px);overflow:hidden;text-overflow:ellipsis}
+.weather-widget.is-stale .weather-attribution{color:#ffe0a8;opacity:.95}
+.l-list .weather-body{padding:24px 28px}
+.l-list .weather-temperature{font-size:64px;line-height:88px}
+.l-list .weather-current>.weather-icon{width:64px;height:64px;margin-right:12px}
+.l-list .weather-condition{margin-left:18px;max-width:220px}
+.l-list .weather-condition strong{font-size:23px;line-height:30px}
+.l-list .weather-condition>span{font-size:20px}
+.l-list .weather-details{font-size:18px;max-width:100%;white-space:normal}
+.l-list .weather-forecast{left:28px;right:28px;top:218px;height:126px;border-left:0;border-top:1px solid rgba(255,255,255,.2);padding:14px 0 0}
+.l-list .weather-day{width:33.333%}
+.l-list .weather-day .weather-icon{width:34px;height:34px;margin:4px auto}
+.l-list .weather-day-name{font-size:19px;line-height:24px}
+.l-list .weather-day-temperatures{font-size:24px;line-height:28px}
+.l-list .weather-day-temperatures small{font-size:20px}
+.l-list .weather-attribution{left:28px;font-size:15px;bottom:14px}
+.has-weather.l-list.a-both .ph-name{max-width:906px}
+.has-weather.l-list.a-icons .app-focus-name{height:48px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* Seven categories remain visible without scrolling the overview. */
+.settings-overview .settings-group{height:96px}
+.settings-overview .settings-group-name{font-size:34px;line-height:40px}
+.settings-overview .settings-group-value{font-size:23px;line-height:30px}
+.weather-settings{position:absolute;left:112px;top:206px;width:1200px}
+.weather-setting-row{display:flex;width:100%;margin-bottom:12px}
+.weather-choice{position:relative;display:flex;align-items:center;width:100%;height:90px;padding:16px 28px;border:1px solid rgba(255,255,255,.15);border-radius:18px;background:rgba(255,255,255,.045);color:var(--ink);text-align:left}
+.weather-choice.is-focus{background:var(--solid);color:var(--solid-ink);border-color:var(--solid)}
+.weather-choice-label{font-size:30px;line-height:40px;white-space:nowrap;flex:none}
+.weather-choice-value{margin-left:auto;padding-left:30px;max-width:740px;font-size:25px;line-height:36px;opacity:.72;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.weather-choice .ico{width:28px;height:28px;margin-left:18px;flex:none}
+.weather-choice>.ico:first-child{margin-left:0;margin-right:14px}
+.weather-setting-row.is-pair .weather-choice{width:calc(50% - 6px)}
+.weather-setting-row.is-pair .weather-choice+.weather-choice{margin-left:12px}
+.weather-setting-row.is-back{margin-bottom:22px}
+.weather-setting-row.is-back .weather-choice{width:auto;height:56px;padding:8px 18px;border:0;background:none}
+.weather-setting-row.is-back .weather-choice.is-focus{background:var(--solid)}
+.weather-settings-note{position:absolute;left:140px;top:864px;width:1200px;font-size:24px;line-height:34px;color:var(--mute)}
+.weather-error{color:var(--warn)}
+.weather-provider{position:absolute;left:140px;top:958px;width:1500px;font-size:20px;line-height:30px;color:var(--mute)}
+.weather-search-back{position:absolute;left:122px;top:182px}
+.weather-search-back .weather-choice{width:auto;height:58px;border:0;background:none}
+.weather-search-back .weather-choice.is-focus{background:var(--solid)}
+.weather-search-controls{position:absolute;left:140px;top:274px;display:flex;align-items:center}
+.weather-query{width:1030px;height:90px;padding:4px;border:2px solid rgba(255,255,255,.3);border-radius:18px;background:rgba(255,255,255,.06)}
+.weather-query.is-focus,.weather-query:focus-within{border-color:#fff;box-shadow:0 0 0 2px rgba(255,255,255,.2)}
+.weather-query input{width:100%;height:100%;padding:16px 24px;border:0;outline:none;background:none;color:var(--ink);font:32px/44px Manrope,Arial,sans-serif;-webkit-user-select:text;user-select:text}
+.weather-query input::placeholder{color:var(--mute)}
+.weather-search-controls>div+div{width:224px;margin-left:24px}
+.weather-search-controls .weather-choice{justify-content:center}
+.weather-search-results{position:absolute;left:140px;top:400px;width:1278px}
+.weather-search-results .weather-choice{height:78px;margin-bottom:10px}
+.weather-search-results .weather-choice-label{font-size:27px;max-width:380px;overflow:hidden;text-overflow:ellipsis}
+.weather-search-results .weather-choice-value{font-size:22px}
+.weather-search-note{position:absolute;left:140px;top:958px;width:1500px;font-size:23px;line-height:32px;color:var(--mute)}
+.bg-light .weather-choice{border-color:rgba(29,26,22,.2);background:rgba(29,26,22,.04)}
+.bg-light .weather-choice.is-focus{background:var(--solid)}
+.bg-light .weather-query{border-color:rgba(29,26,22,.35);background:rgba(29,26,22,.04)}
+.bg-light .weather-query.is-focus,.bg-light .weather-query:focus-within{border-color:#1d1a16}
+/* Keep the additional Home screen selector within the settings panel. */
+.detail-layout .appearance-rows{top:224px}
+.detail-layout .setting-section+.setting-section{margin-top:18px}
+.detail-layout .setting-label{font-size:24px;line-height:30px;margin-bottom:8px}
+.detail-layout .is-horizontal .setting-choice{min-height:68px;font-size:27px;padding:8px 12px}

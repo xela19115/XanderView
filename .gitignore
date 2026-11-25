@@ -27,3 +27,7 @@ PP*.woff2
 /explorations/
 /docs/research/
 /docs/articles/
+
+# Optional third-party icon pack is downloaded during local setup.
+/app/assets/icons/projectivy/
+/.venv/

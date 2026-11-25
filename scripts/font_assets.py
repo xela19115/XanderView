@@ -64,7 +64,7 @@ def font_overlay(root=ROOT, include_private=True):
     return assets
 
 
-def write_widget_archive(output, root=ROOT, include_private=True):
+def write_widget_archive(output, root=ROOT, include_private=True, include_optional_icons=False):
     """Create an unsigned archive without reading signing or device settings."""
     app = root / 'app'
     overlay = font_overlay(root, include_private)
@@ -75,6 +75,8 @@ def write_widget_archive(output, root=ROOT, include_private=True):
             if not source.is_file():
                 continue
             name = source.relative_to(app).as_posix()
+            if name.startswith('assets/icons/projectivy/') and not include_optional_icons:
+                continue
             if name.startswith('assets/private-fonts/'):
                 raise ValueError('Private font binaries must stay in .local/, not app/.')
             if name not in overlay and is_runtime_source(name):

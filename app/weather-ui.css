@@ -97,3 +97,25 @@
 .bg-light .weather-choice.is-focus{background:var(--solid)}
 .bg-light .weather-query{border-color:rgba(29,26,22,.35);background:rgba(29,26,22,.04)}
 .bg-light .weather-query.is-focus,.bg-light .weather-query:focus-within{border-color:#1d1a16}
+
+/* Compact top weather strip, with current conditions and forecast. */
+.l-dock .weather-body{padding:12px 18px}
+.l-dock .weather-location{font-size:17px;line-height:22px}
+.l-dock .weather-current{height:62px;margin-top:0}
+.l-dock .weather-current>.weather-icon{width:42px;height:42px;margin-right:8px}
+.l-dock .weather-temperature{font-size:46px;line-height:58px;letter-spacing:-1px}
+.l-dock .weather-temperature small{font-size:16px;top:8px;margin-left:2px}
+.l-dock .weather-widget.with-forecast .weather-condition{max-width:145px;margin-left:10px}
+.l-dock .weather-condition strong,.l-dock .weather-condition>span{font-size:16px;line-height:22px}
+.l-dock .weather-widget.with-forecast .weather-details{font-size:14px;line-height:22px;max-width:calc(50% - 12px)}
+.l-dock .weather-attribution{left:18px;bottom:8px;font-size:13px;line-height:18px}
+.l-dock .weather-forecast{left:50%;top:24px;right:12px;height:112px;padding-left:10px}
+.l-dock .weather-day{width:105px}
+.l-dock .weather-day-name{font-size:16px;line-height:22px}
+.l-dock .weather-day .weather-icon{width:34px;height:34px;margin:5px auto}
+.l-dock .weather-day-temperatures{font-size:19px;line-height:26px}
+.l-dock .weather-day-temperatures small{font-size:15px;margin-left:6px}
+.l-dock .weather-empty{font-size:18px;line-height:26px;margin-top:15px}
+
+/* Weather sits directly on the wallpaper. */
+.l-dock .weather-material.mat{display:none}

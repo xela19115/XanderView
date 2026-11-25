@@ -142,3 +142,122 @@
 .stage.bg-light.l-dock .dock .tile .label{color:#1d1a16;text-shadow:none}
 .stage.bg-light.l-dock .dock .tile .mark:not(.native-icon) img{filter:grayscale(1) brightness(0)}
 .l-dock .quiet-utils .u-label,.font-custom.l-dock .home .quiet-utils .u-label{display:none}
+
+/* Left navigation and six-column app grid. */
+.l-dock .quiet-utils,.l-dock .quiet-utils.is-icons,.l-dock .quiet-utils.is-text{left:76px;right:auto;top:310px;bottom:auto;display:flex;flex-direction:column;align-items:center;gap:18px}
+.l-dock .quiet-utils .u,.l-dock .quiet-utils .u:first-child{margin:0}
+.l-dock .quiet-utils .u .u-label,.l-dock .quiet-utils.is-text .u-label{display:none}
+.l-dock .util-focus-label{text-align:left}
+.l-dock .dock>.mat{display:none}
+.l-dock .app-focus-name{display:none}
+.stage.l-dock .dock .tile .mark{left:34px;top:20px}
+.stage.l-dock.a-icons .dock .tile .mark{left:30px;top:52px}
+.l-dock .dock .tile .label{top:92px!important}
+.l-dock.a-text .dock .tile .label{top:52px!important}
+
+/* Larger app cards, using the TV's original icon artwork when available. */
+.stage.l-dock .dock .shelf{overflow:hidden}
+.stage.l-dock .dock .tile,.stage.l-dock .dock .plate,.stage.l-dock .dock .tile-content,.stage.l-dock .dock .tile.is-focus::after{border-radius:8px}
+.stage.l-dock .dock .tile .tile-content,.stage.l-dock .dock .tile[class*="brand-"] .tile-content{background:#232c3a;color:#fff;overflow:hidden}
+.stage.l-dock .dock .tile.brand-netflix .tile-content{background:#161616}
+.stage.l-dock .dock .tile.brand-youtube .tile-content{background:#f5f5f5;color:#191919}
+.stage.l-dock .dock .tile.brand-primevideo .tile-content{background:#0879c9}
+.stage.l-dock .dock .tile.brand-disneyplus .tile-content{background:#10255d}
+.stage.l-dock .dock .tile.brand-appletv .tile-content{background:#101010}
+.stage.l-dock .dock .tile.brand-plex .tile-content{background:#292929}
+.stage.l-dock .dock .tile.brand-kartinatv .tile-content{background:#6c299d}
+.stage.l-dock .dock .tile.brand-tvplus .tile-content{background:#194b99}
+.stage.l-dock .dock .tile.is-focus .tile-content{opacity:1}
+.stage.l-dock .dock .tile .mark,.stage.l-dock.a-icons .dock .tile .mark{left:52px;top:28px;color:#fff!important}
+.stage.l-dock.a-icons .dock .tile .mark{top:50px}
+.stage.l-dock .dock .tile.brand-netflix .mark{color:#e50914!important}
+.stage.l-dock .dock .tile.brand-youtube .mark{color:#f03!important}
+.stage.l-dock .dock .tile.brand-youtube .label{color:#191919;text-shadow:none}
+.stage.l-dock .dock .tile .mark:not(.native-icon) img{filter:none}
+.stage.l-dock .dock .tile .native-icon img{filter:none}
+.stage.l-dock .dock .tile .monogram{font-size:52px!important}
+.stage.l-dock .dock .tile .label{top:120px!important;font-size:24px!important;line-height:28px;height:50px}
+.stage.l-dock.a-text .dock .tile .label{top:68px!important}
+.stage.l-dock .native-tile-image{position:absolute;z-index:2;inset:0;width:100%;height:100%;object-fit:contain;border-radius:inherit}
+.stage.l-dock .tile-content.has-native-tile>.mark,.stage.l-dock .tile-content.has-native-tile>.label{visibility:hidden}
+
+/* Keep the grid unframed and make each app card larger. */
+.stage.l-dock .dock>.mat,.stage.l-dock .dock>.mat::after{display:none}
+.stage.l-dock .dock .tile .mark,.stage.l-dock.a-icons .dock .tile .mark{left:60px;top:30px}
+.stage.l-dock.a-icons .dock .tile .mark{top:55px}
+.stage.l-dock .dock .tile .label{top:132px!important}
+.stage.l-dock.a-text .dock .tile .label{top:78px!important}
+.stage.l-dock .native-tile-image{top:0;left:0;right:0;bottom:0}
+
+/* Five square cards per row, with centered logos. */
+.stage.l-dock .dock .tile .mark,.stage.l-dock.a-icons .dock .tile .mark{left:10px}
+.stage.l-dock .dock .tile.brand-tvplus .tile-content{background:#fff}
+.stage.l-dock .dock .tile.brand-tvplus .native-tile-image{left:10%;top:10%;right:auto;bottom:auto;width:80%;height:80%}
+
+/* Larger marks remain centered inside the five-column tiles. */
+.stage.l-dock .dock .tile .mark,.stage.l-dock.a-icons .dock .tile .mark{left:6px;top:20px}
+.stage.l-dock.a-icons .dock .tile .mark{top:30px}
+.stage.l-dock .dock .tile .monogram{font-size:68px!important}
+.stage.l-dock .dock .tile.brand-tvplus .native-tile-image{left:6%;top:6%;width:88%;height:88%}
+
+/* Keep marks and labels centered in the larger square cards. */
+.stage.l-dock .dock .tile .mark,.stage.l-dock.a-icons .dock .tile .mark{left:21px;top:28px}
+.stage.l-dock.a-icons .dock .tile .mark{top:45px}
+.stage.l-dock .dock .tile .label{top:150px!important}
+.stage.l-dock.a-text .dock .tile .label{top:93px!important}
+
+/* Keep previous app marks centered on rectangular cards. */
+.stage.l-dock .dock .tile .mark,.stage.l-dock.a-icons .dock .tile .mark{top:3px}
+.stage.l-dock .dock .tile .label{top:104px!important}
+.stage.l-dock.a-text .dock .tile .label{top:54px!important}
+
+/* The Projectivy pack uses transparent artwork designed for dark tiles. */
+.stage.l-dock .dock .tile .tile-content.projectivy-tile{background:#171922!important}
+
+/* Invert the supplied black-on-white logo while retaining its orange accent. */
+.stage.l-dock .dock .tile.brand-kartinatv .tile-content.has-native-tile{background:#171922}
+.stage.l-dock .dock .tile.brand-kartinatv .native-tile-image{filter:none}
+
+/* Owner-supplied horizontal Samsung TV Plus icon uses white lettering. */
+.stage.l-dock .dock .tile.brand-tvplus .tile-content.has-native-tile{background:#171922}
+
+/* Larger three-column cards keep fallback marks and labels centered. */
+.stage.l-dock .dock .tile .mark,.stage.l-dock.a-icons .dock .tile .mark{left:86px;top:25px}
+.stage.l-dock.a-icons .dock .tile .mark{top:35px}
+.stage.l-dock .dock .tile .label{top:145px!important}
+.stage.l-dock.a-text .dock .tile .label{top:82px!important}
+
+/* Scale fallback marks and labels with the selected number of columns. */
+.stage.l-dock .dock .tile .mark,.stage.l-dock.a-icons .dock .tile .mark{left:var(--tile-mark-left);top:var(--tile-mark-top)}
+.stage.l-dock .dock .tile .label,.stage.l-dock.a-text .dock .tile .label{top:var(--tile-label-top)!important;font-size:var(--tile-label-font)!important;line-height:1.2}
+/* Fit all four layout controls in the settings panel. */
+.detail-layout .appearance-rows{top:224px}
+.detail-layout .setting-section+.setting-section{margin-top:18px}
+.detail-layout .setting-label{font-size:24px;line-height:30px;margin-bottom:8px}
+.detail-layout .is-horizontal .setting-choice{min-height:68px;font-size:27px;padding:8px 12px}
+.stage.l-dock .dock .tile .monogram{font-size:var(--tile-monogram-size)!important}
+
+/* Clear, translucent cards for all app artwork. */
+.stage.l-dock .dock .tile .tile-content,
+.stage.l-dock .dock .tile[class*="brand-"] .tile-content,
+.stage.l-dock .dock .tile .tile-content.projectivy-tile,
+.stage.l-dock .dock .tile.brand-kartinatv .tile-content.has-native-tile,
+.stage.l-dock .dock .tile.brand-tvplus .tile-content.has-native-tile{background:rgba(16,20,28,.28)!important;box-shadow:none}
+.stage.l-dock .dock .tile.is-focus .tile-content{background:rgba(255,255,255,.16)!important}
+
+/* In Both mode, reserve the lower part of every artwork tile for its name. */
+.stage.l-dock.a-both .dock .tile .native-tile-image,
+.stage.l-dock.a-both .dock .tile.brand-tvplus .native-tile-image{left:5%;right:auto;top:5%;bottom:auto;width:90%;height:60%}
+.stage.l-dock.a-both .dock .tile .tile-content.has-native-tile>.label{visibility:visible;z-index:3}
+.stage.l-dock.a-both .dock .tile .label{height:calc(100% - var(--tile-label-top) - 4px)}
+
+/* Both mode places names outside and below their app cards. */
+.stage.l-dock.a-both .dock .tile .tile-content{overflow:visible}
+.stage.l-dock.a-both .dock .tile .label{top:calc(100% + 5px)!important;left:0;right:0;height:28px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#fff;text-shadow:0 1px 4px #000}
+.stage.l-dock.a-both .dock .tile.brand-youtube .label{color:#fff;text-shadow:0 1px 4px #000}
+.stage.bg-light.l-dock.a-both .dock .tile .label,.stage.bg-light.l-dock.a-both .dock .tile.brand-youtube .label{color:#1d1a16;text-shadow:none}
+.stage.l-dock.a-both .dock .tile .native-tile-image{left:0;right:0;top:0;bottom:0;width:100%;height:100%}
+.stage.l-dock.a-both .dock .tile.brand-tvplus .native-tile-image{left:6%;top:6%;right:auto;bottom:auto;width:88%;height:88%}
+
+/* Publicly sourced logo includes dark text. */
+.stage.l-dock .dock .tile.brand-tvplus .tile-content.has-native-tile{background:rgba(16,20,28,.28)!important}

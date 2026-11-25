@@ -16,7 +16,7 @@ node = ET.parse(manifest).getroot().find('t:application', ns)
 old_package, old_id = node.get('package'), node.get('id')
 new_id = args.package + '.XanderView'
 # Keep every runtime, validation and test reference in sync, without touching stored preferences.
-for path in [manifest, root/'app/device.js', root/'app/return-home.js', root/'scripts/check.py', root/'scripts/check-browser.mjs', root/'scripts/check-return-home.cjs']:
+for path in [manifest, root/'app/device.js', root/'app/return-home.js', root/'app/xanderview/device.js', root/'app/xanderview/return-home.js', root/'scripts/check.py', root/'scripts/check-browser.mjs', root/'scripts/check-return-home.cjs']:
     text = path.read_text()
     text = text.replace(old_id, new_id)
     if path == manifest:

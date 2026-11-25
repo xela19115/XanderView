@@ -33,8 +33,11 @@ Photographers retain their rights. Wallpapers, thumbnails, panel backgrounds and
 
 Development dependencies retain the licences in their npm packages. They are not copied into the TV JavaScript runtime.
 
-`npm run export:public` excludes private fonts and includes this notice and the root MIT licence. Preserve the included font and icon licence texts. Review [public release preparation](docs/public-release.md) before publishing a repository or download.
+`npm run package` excludes private fonts and includes this notice and the root MIT licence. Preserve the included font and icon licence texts.
 
 ## Weather and location data
 
 The optional weather widget retrieves forecasts from [Open-Meteo](https://open-meteo.com/) and location search results from its [GeoNames-backed geocoding API](https://open-meteo.com/en/docs/geocoding-api). Weather data is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); location data is attributed to [GeoNames](https://www.geonames.org/). Attribution is displayed in the widget and its Settings screen. The bundled source contains no fixed personal weather location, API key or account token. Weather icons are original simple SVG line drawings in the launcher.
+
+
+Optional Projectivy icons are downloaded separately from [Projectivy Icon Pack](https://github.com/SicMundus86/ProjectivyIconPack) by SicMundus86; its repository did not specify a redistribution licence. The public release does not bundle those icons. Kartina TV and Samsung TV Plus artwork was supplied by the project owner. Individual brand names and marks remain their owners’ property.
