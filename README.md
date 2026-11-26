@@ -14,6 +14,7 @@ XanderView is a remote-friendly Samsung Tizen TV launcher, forked from [CleanFra
 - **Dock:** two rows of five, with scrolling for additional selected apps.
 - Shared apps, wallpaper, weather and appearance settings across both views. The selected Home screen is restored when the app opens.
 - App icons, names or both; in Both mode names appear below the cards.
+- The displayed clock periodically synchronizes through [TimeAPI](https://timeapi.io/); this does not change the TV system clock. If the service is unavailable, the launcher falls back to its last recent correction or the TV clock.
 - Optional weather and forecast, with a configurable location and temperature units, provided by Open-Meteo.
 - Fifteen original CleanFrame wallpapers, fonts, translucent cards and remote-friendly controls.
 - Shortcuts for TV settings and connected devices. Availability and behavior vary by Samsung model and firmware.

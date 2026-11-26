@@ -1,6 +1,6 @@
 {
   "name": "xanderview",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "private": true,
   "description": "A quiet, remote-friendly Samsung Tizen TV launcher.",
   "scripts": {
@@ -11,7 +11,8 @@
     "package": "python3 scripts/export-public.py",
     "check:public": "python3 scripts/check-public.py",
     "check:layouts": "node scripts/check-column-settings.mjs",
-    "check:views": "node scripts/check-launcher-switch.mjs"
+    "check:views": "node scripts/check-launcher-switch.mjs",
+    "check:clock": "node scripts/check-network-clock.mjs"
   },
   "devDependencies": {
     "playwright": "1.64.1"

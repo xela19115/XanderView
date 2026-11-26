@@ -1216,7 +1216,7 @@
   }
 
   function clockText() {
-    var d = new Date(), h = d.getHours() % 12 || 12, m = d.getMinutes();
+    var d = new Date(window.FrameClock.now()), h = d.getHours() % 12 || 12, m = d.getMinutes();
     return h + ':' + (m < 10 ? '0' : '') + m;
   }
   function clockHtml() {
@@ -1225,7 +1225,7 @@
     return text.replace(/[0-9]/g, function (digit) { return '<span class="clock-digit">' + digit + '</span>'; });
   }
   function renderCaption(t, hs) {
-    var d = new Date(), month = d.getMonth() + 1, day = d.getDate();
+    var d = new Date(window.FrameClock.now()), month = d.getMonth() + 1, day = d.getDate();
     var date = d.getFullYear() + '-' + (month < 10 ? '0' : '') + month + '-' + (day < 10 ? '0' : '') + day;
     var html = '<div class="home-clock-row"><span class="clock">' + clockHtml() + '</span><span class="clock-period">' + (d.getHours() < 12 ? 'AM' : 'PM') + '</span><span class="clock-divider" aria-hidden="true"></span><span class="home-date">' + date + '</span></div>';
     if (S.c.layout === 'list' && S.c.apps !== 'icons' && hs.items[hs.i] && (photoLabel(hs.items[hs.i].id, false).size < 88 || photoLabel(hs.items[hs.i].id, false).ellipsis)) html += '<span class="cap-line full-name">' + esc(app(hs.items[hs.i].id).name) + '</span>';
@@ -1938,7 +1938,7 @@
     clearTimeout(clockTimer);
     if (document.hidden) return;
     if (top().id === 'home' || isSettingsDetail(top())) renderCaption(top(), homeState(top()));
-    clockTimer = setTimeout(updateClock, 60000 - (Date.now() % 60000) + 30);
+    clockTimer = setTimeout(updateClock, 60000 - (window.FrameClock.now() % 60000) + 30);
   }
   function focusStage() { try { stage.focus({ preventScroll: true }); } catch (e) { stage.focus(); } }
   function after() { norm(); render(); syncRotation(); }
@@ -2080,6 +2080,7 @@
   initialise();
   setLook({}, { transient: true, startup: true });
   norm(); render(); fit(); focusStage(); updateClock(); syncRotation();
+  window.FrameClock.subscribe(updateClock);
   // Populate home tiles with the TV's installed-app icons without requiring a visit to All apps.
   if (window.tizen && tizen.application) refreshCatalog();
   Weather.subscribe(function (state) { weatherSnapshot = state; render(); });

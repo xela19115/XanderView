@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="https://xanderview.local/app" version="0.8.0" viewmodes="maximized">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="https://xanderview.local/app" version="0.8.1" viewmodes="maximized">
   <tizen:application id="XanderView.XanderView" package="XanderView" required_version="6.5"/>
   <tizen:app-control>
     <tizen:src name="index.html" reload="disable"/>
@@ -8,6 +8,7 @@
   <content src="index.html"/>
   <name>XanderView</name>
   <icon src="icon.png"/>
+  <access origin="https://timeapi.io" subdomains="false"/>
   <access origin="https://api.open-meteo.com" subdomains="false"/>
   <access origin="https://geocoding-api.open-meteo.com" subdomains="false"/>
   <feature name="http://tizen.org/feature/screen.size.normal.1080.1920"/>
